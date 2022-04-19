@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 //imports useState
+import Button from '@mui/material/Button';
+//imports the buttons used
 import Home from "./Tabs/Home";
 //imports Home.js from the Tabs folder
 import Register from "./Tabs/Register";
@@ -49,7 +51,8 @@ function TabManager() {
             <div>
                 <header>
                     <ul>
-                        <li><a href="home" onClick={handleHome}>Home</a></li>
+                        <li><Button>Home</Button></li>
+                        <li><a href="home" onClick={handleHome}>HomeHII</a></li>
                         <li><a href="#register" onClick={handleRegister}>Login/Register</a></li>
                         <li><a href="#diagram" onClick={handleDiagram}>Events</a></li> {/*CHANGE THIS LATER!!*/}
                         <li><a href="#contact" onClick={handleContact}>Contact Us</a></li>
@@ -70,6 +73,7 @@ function TabManager() {
             <div>
                 <header>
                     <ul>
+                        
                         <li><a href="home" onClick={handleHome}>Home</a></li>
                         <li><a href="#register" onClick={handleRegister}>Login/Register</a></li>
                         <li><a href="#contact" onClick={handleContact}>Contact Us</a></li>
