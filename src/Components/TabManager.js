@@ -46,49 +46,24 @@ function TabManager() {
     }
     //are used when something is clicked
 
-    if (isLoggedIn) {
-        return (
-            <div>
-                <header>
-                    <ul>
-                        <li><Button>Home</Button></li>
-                        <li><a href="home" onClick={handleHome}>HomeHII</a></li>
-                        <li><a href="#register" onClick={handleRegister}>Login/Register</a></li>
-                        <li><a href="#diagram" onClick={handleDiagram}>Events</a></li> {/*CHANGE THIS LATER!!*/}
-                        <li><a href="#contact" onClick={handleContact}>Contact Us</a></li>
-                        <li><a href="#about" onClick={handleAbout}>About Us</a></li>
-                        <li><a href="#adminlogin" onClick={handleAdmin}>Admin Login</a></li>
-                    </ul>
-                </header>
-                <body>
-                    {activeTab}
-                </body>
-            </div>
-        )
-    }
+    return (
+        <div>
+            <header>
+                <ul>
+                    <li><Button>Home</Button></li>
+                    <li><a href="home" onClick={handleHome}>HomeHII2</a></li>
+                    <li><a href="#register" onClick={handleRegister}>Login/Register</a></li>
+                    {isLoggedIn ? <li><a href="event" onClick={handleDiagram}>Events</a></li> : <></>}
+                    <li><a href="#contact" onClick={handleContact}>Contact Us</a></li>
+                    <li><a href="#about" onClick={handleAbout}>About Us</a></li>
+                    <li><a href="#adminlogin" onClick={handleAdmin}>Admin Login</a></li>
+                </ul>
+            </header>
+            <body>
+                {activeTab}
+            </body>
+        </div>
+    )
     //gives user access to certain tabs if loggedIn
-
-    else {
-        return (
-            <div>
-                <header>
-                    <ul>
-                        
-                        <li><a href="home" onClick={handleHome}>Home</a></li>
-                        <li><a href="#register" onClick={handleRegister}>Login/Register</a></li>
-                        <li><a href="#contact" onClick={handleContact}>Contact Us</a></li>
-                        <li><a href="#about" onClick={handleAbout}>About Us</a></li>
-                        <li><a href="#adminlogin" onClick={handleAdmin}>Admin Login</a></li>
-                    </ul>
-                    {/*HTML for the navbar*/}
-                </header>
-                <body>
-                    {activeTab}
-                    {/*The actual tab*/}
-                </body>
-            </div>
-        )
-    }
 }
-
 export default TabManager
