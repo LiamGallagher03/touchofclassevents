@@ -37,7 +37,7 @@ function Diagram() {
     const [searchQuery, setSearchQuery] = useState(query || '')
     const filteredevents = filterEvants(evants, searchQuery)
     //creates variables that uses methods from above and will be used in return()
-
+    
     return (
         <div>
             <Search 
@@ -45,12 +45,14 @@ function Diagram() {
                 setSearchQuery = {setSearchQuery}
             />
             {/* uses the component function and passes two variables*/}
-            
+
             <table id = "eventTable">
                 <tr>
                     <th id="eventName">Event Name</th>
                     <th id="eventDay">Day</th>
-                    <th id="eventRegistree">Registree</th>
+                    <th id="eventRegistree">Registrees</th>
+                    <th id="registerForEvent">Register</th>
+                    <th id="unregisterFromEvent">Unregister</th>
                 </tr>
                 {/*Creates header*/}
                     {filteredevents.map((evant) =>
@@ -59,10 +61,12 @@ function Diagram() {
                             eventName = {evant.eventName}
                             day = {evant.day}
                             registree = {evant.registree}
+                            evants={evants}
+                            setEvants = {setEvants}
                         />)}
                 {/*Filters the events and uses the Event component to create table cells*/}
             </table>
-            <NewEvent />
+            <NewEvent setEvants = {setEvants}/>
             {/*uses the NewEvent component*/}
         </div>
     )

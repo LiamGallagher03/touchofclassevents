@@ -11,10 +11,10 @@ function Register(props) {
     
     return (
         <div>
-            <h3>New Here? Register!</h3>
+            <h2>New Here? Register!</h2>
             <Registration />
             {/* Uses Registration component, allows user to actually register*/}
-            <h3>Login!</h3>
+            <h2>Login!</h2>
             <Login tryLogin={setLoggedIn}/>
             {props.receiveLogin(loggedIn)}
             {/* Uses Login component, allows user to actually login*/}

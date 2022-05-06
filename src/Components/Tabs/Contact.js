@@ -9,7 +9,6 @@ function Contact() {
             <br></br>
             <br></br>
             <h3>Let us know if you have any questions about our convention center and/or any problems that you have!</h3>
-
         </div>
     )
 }

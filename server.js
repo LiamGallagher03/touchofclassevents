@@ -51,6 +51,15 @@ app.post('/makeEvent', (req, res) => {
     })
 })
 
+app.post('/incrementRegistree', (req, res) => {
+    const {id, registree} = req.body
+    const query = db.prepare(`UPDATE Events SET registree = ? WHERE id = ?`)
+    const newRegistrees = query.run(registree, id)
+    res.json ({
+        newRegistrees
+    })
+})
+
 app.post('/login', (req, res) => {
     const {username, password} = req.body
     const query = db.prepare(`SELECT * FROM Users WHERE username=? AND password=?`)

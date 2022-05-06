@@ -1,5 +1,7 @@
 import './App.css';
 //imports App.css
+import { teal, green, lightgreen } from '@mui/material/colors';
+//imports new colors from @mui
 import React from 'react';
 //imports React
 import TabManager from './Components/TabManager.js';
