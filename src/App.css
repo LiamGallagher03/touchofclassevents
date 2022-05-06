@@ -6,7 +6,6 @@ header {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   position: sticky;
   height: auto;
-  border-radius: 5px;
 }
 
 /* Logo Styling */
@@ -31,10 +30,18 @@ header a {
 }
 /*css for the Event Table*/
 #eventTable {
-  width: 30em;
+  width: 100em;
   text-align: center;
   table-layout: fixed;
   border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#eventsTable {
+  width: 100em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #eventName {
@@ -45,6 +52,10 @@ header a {
 #eventDay {
   width: 40%;
   border: 1px solid white;
+}
+
+label {
+  font-size: 18px;
 }
 
 #eventRegistree {
@@ -124,4 +135,16 @@ body {
 
 p {
   font-size: 18px;
+}
+
+td {
+  font-size: 18px;
+  width: 100%;
+  padding: 10px;
+}
+
+tr {
+  font-size: 19px;
+  padding: 12px;
+  width: 100em;
 }

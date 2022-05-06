@@ -53,7 +53,6 @@ function Diagram() {
                     <th id="eventRegistree">Registree</th>
                 </tr>
                 {/*Creates header*/}
-                <tr>
                     {filteredevents.map((evant) =>
                         <Event
                             id = {evant.id}
@@ -61,7 +60,6 @@ function Diagram() {
                             day = {evant.day}
                             registree = {evant.registree}
                         />)}
-                </tr>
                 {/*Filters the events and uses the Event component to create table cells*/}
             </table>
             <NewEvent />

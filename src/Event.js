@@ -1,7 +1,7 @@
 function Event({id, eventName, day, registree}) {
     return (
         <div>
-            <table id= "eventTable">
+            <table id= "eventsTable">
                <tr>
                    <td id="eventName">{eventName}</td>
                    <td id="eventDay">{day}</td>
