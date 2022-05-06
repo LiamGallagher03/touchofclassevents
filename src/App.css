@@ -38,12 +38,6 @@ header a {
   margin-right: auto;
 }
 
-#eventsTable {
-  width: 100em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 #eventName {
   width: 40%;
   border: 1px solid white;
@@ -63,8 +57,30 @@ label {
   border: 1px solid white;
 }
 
+#registerForEvent {
+  width: 20%;
+  border: 1px solid white;
+}
+
+#unregisterFromEvent {
+  width: 20%;
+  border: 1px solid white;
+}
+
 th, tr, td, table {
   text-align: center;
+}
+
+th {
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+}
+
+td {
+  font-size: 18px;
+  width: 100%;
+  padding: 10px;
 }
 
 /* Change the background color on mouse-over */
@@ -135,16 +151,4 @@ body {
 
 p {
   font-size: 18px;
-}
-
-td {
-  font-size: 18px;
-  width: 100%;
-  padding: 10px;
-}
-
-tr {
-  font-size: 19px;
-  padding: 12px;
-  width: 100em;
 }

@@ -37,7 +37,7 @@ export default class AdminLogin extends React.Component {
                 if (data) {
                     window.alert("Success! You have logged in as admin.")
                 }
-                else window.alert("Try again. Your admin username or password is incorrect.")
+                else window.alert("Try again. Your admin username or password is incorrect or you do not have admin permissions.")
             })
     }
     //when the login button is clicked, checks if username, password, and isAdmin are correct/true
