@@ -8,6 +8,10 @@ function Event({id, eventName, day, registree, evants, setEvants}) {
                 registree:registree+1
             })
         })
+        .then(response => response.json())
+        .then(data => {
+            window.alert("You have registered from this event. Please exit the page if you have finished registration")
+        })
     }
 
     const decrement=()=>{
@@ -18,6 +22,10 @@ function Event({id, eventName, day, registree, evants, setEvants}) {
                 id:id,
                 registree:registree-1
             })
+        })
+        .then(response => response.json())
+        .then(data => {
+            window.alert("You have unregistered from this event. Please exit the page if you have finished registration")
         })
     }
     
